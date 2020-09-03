@@ -1,0 +1,47 @@
+////////////////////////////////////////
+// FLEX CONTAINER THAT HOLD DASHBOARD SECTION AND PROFILE SECTION
+
+.container {
+    display: flex;
+    height: 100rem;
+
+    @include medium1 {
+        flex-direction: column;
+    }
+   
+}
+
+////////////////////////////////////////
+// DASHBOARD SECTION
+
+.dashboard-section {
+    background-color: color(background);
+    flex: 0 0 68%;
+    height: 100rem;
+
+    @include largest1 {
+        flex: 0 0 63%;
+    }
+
+    @include largest {
+        flex: 0 0 60%;
+    }
+
+    @include large {
+        flex: 0 0 56%;
+    }
+
+    @include medium {
+        flex: 0 0 53%;
+        height: 135rem;
+    }
+
+   
+}
+
+////////////////////////////////////////
+// PROFILE SECTION
+
+.details {
+    flex: 1;
+}

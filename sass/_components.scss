@@ -1,0 +1,524 @@
+////////////////////////////////////////
+// HEADER WITH MENU-TOGGLE, SEARCH-BUTTON AND NOTIFICATION
+
+.header {
+    display: flex;
+    padding: 0 4rem;
+    align-items: center;
+    height: 7rem;
+    background-color: color(primary);
+
+    &__ham {
+        margin-right: auto;
+        font-size: 3rem;
+        color: white;
+
+        @include medium1 {
+            margin-right: 0;
+        }
+    }
+    
+    &__icon-box {
+        color: #fff;
+        position: relative;
+        margin-left: 4rem;
+
+        i {
+            font-size: 3rem;
+        }
+
+        @include smallest-v3 {
+            margin-left: 0;
+        }
+
+    }
+
+    &__notification {
+        background-color: color(tertiary);
+        border-radius: 50%;
+        height: 1.75rem;
+        width: 1.75rem;
+        color: white;
+        position: absolute;
+        top: 0;
+        right: -.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include smallest-v3 {
+            right: -.6rem;
+            top: -.4rem;
+        }
+        
+    }
+
+    @include medium {
+        padding: 0 2.5rem;
+    }
+
+    @include medium1 {
+        justify-content: space-between;
+    }
+}
+
+////////////////////////////////////////
+// SEARCH-BUTTON
+
+.search {
+    display: flex;
+    flex: 0 0 80%;
+    align-items: center;
+    justify-content: center;
+
+    &__input {
+        outline: none;
+        border: none;
+        border-radius: $border-radius;
+        background-color: #fff;
+        font-family: inherit;
+        padding: .7rem 2rem;
+        margin-right: -3.5rem;
+        width: 90%;
+        color: inherit;
+
+        &::placeholder {
+            color: color(secondary);
+        }
+
+        
+        @include medium1 {
+            width: 100%;
+        }
+
+        @include smallest {
+            width: 70%;
+        }
+
+       
+    }
+
+    &__button {
+        border: none;
+        outline: none;
+        background: none;
+        color: color(secondary);
+        margin-left: 1rem;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+////////////////////////////////////////
+// MAIN-SECTION WHICH CONTAIN CARD AND DASHBOARD ITEMS
+.main {
+    margin: 4rem 4rem 4rem 20%;
+
+    @include medium{
+        margin: 4rem 4rem 4rem 15%;
+    }
+
+    @include medium1 {
+        width: 80%;
+        margin: 4rem auto;
+    }
+
+    @include smallest-v2 {
+        width: 90%;
+        margin: 4rem auto;
+    }
+}
+
+////////////////////////////////////////
+// CARD
+
+.card {
+    color: #fff;
+    margin-bottom: 4rem;
+    padding: 3rem 4rem;
+    border-radius: $border-radius;
+    background-color: color(primary);
+
+    &__heading2 {
+        font-size: 1.1rem;
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        opacity: .7;
+    }
+
+    @include medium1 {
+        margin-top: 6rem;
+    }
+}
+
+////////////////////////////////////////
+// DASHBOARD ITEMS
+
+.dashboard {
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+        gap: 2rem;
+        
+        @include medium1 {
+            margin-bottom: 7rem;
+        }
+    }
+
+    &__item {
+        background-color: #fff;
+        border-radius: $border-radius;
+        display: flex;
+        align-items: center;
+        padding: 2rem;
+
+        .fa-files-o {
+            font-size: 3rem;
+            margin-right: 2rem;
+        }
+
+
+        .fa-chevron-right {
+            background-color: color(light-grey);
+            border-radius: $border-radius;
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+    }
+
+    &__item-name {
+        margin-right: auto;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    li:nth-child(3n+3) {
+        .fa-files-o {
+            color: color(secondary);
+            background-color: rgba(223, 142, 113,.3);
+            padding: 1rem;
+            border-radius: $border-radius;
+        }
+    }
+
+    li:nth-child(3n+1) {
+        .fa-files-o {
+            color: color(dark-orange);
+            background-color: rgba(238, 86, 80,.3);
+            padding: 1rem;
+            border-radius: $border-radius;
+        }
+    }
+
+    li:nth-child(3n+2) {
+        .fa-files-o {
+            color: color(light-green);
+            background-color: rgba(9, 127, 153,.3);
+            padding: 1rem;
+            border-radius: $border-radius;
+        }
+    }
+
+} 
+
+////////////////////////////////////////
+// PROFILE 
+
+.profile {
+
+    &__header {
+        height: 7rem;
+        display: flex;
+        align-items: center;
+        margin: 0 3rem;
+
+        .heading2 {
+            margin-right: 2rem;
+            font-size: 2rem;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 6rem;
+                bottom: -.3rem;
+                height: .2rem;
+                background-color: color(secondary);
+            }
+
+            @include medium {
+                margin-right: 3rem;
+            }
+        }
+
+        i {
+            font-size: 2rem;
+        }
+
+        .fa-pencil {
+            margin-right: auto;
+        }
+
+        @include medium {
+            margin: 0 2.2rem;
+        }
+
+        @include medium1 {
+            width: 80%;
+            margin: 4rem auto;
+        }
+
+        @include smallest-v2 {
+            width: 90%;
+            margin: 4rem auto;
+        }
+    }
+
+    &__picture {
+        margin: 0 0 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include medium {
+            margin: 2rem 0 4rem;
+        }
+    }
+
+    &__icon {
+        width: 15rem;
+
+        @include medium {
+            width: 18rem;
+        }
+
+        .picture {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-left: -5rem;
+
+        &--block {
+            display: block;
+            text-align: right;
+            font-weight: normal;
+            font-size: 1.7rem;
+        }
+
+    }
+}
+
+////////////////////////////////////////
+// INBOX
+
+.inbox {
+    &__header {
+        display: flex;
+        align-items: center;
+        margin: 3rem;
+
+        @include medium {
+            margin: 5rem 3rem 3rem;
+        }
+
+        @include medium1 {
+            width: 80%;
+            margin: 4rem auto;
+        }
+
+        @include smallest-v2 {
+            width: 90%;
+            margin: 4rem auto;
+        }
+    }
+
+    .heading2 {
+        position: relative;
+        margin-right: 2rem;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 6rem;
+            bottom: -.3rem;
+            height: .2rem;
+            background-color: color(secondary);
+        }
+    }
+
+    &__header-badge {
+        border-radius: 20px;
+        background-color: color(dark-orange);
+        padding: .5rem 2rem;
+        color: #fff;
+    }
+
+    &__messages {
+        margin: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        @include medium1 {
+            width: 80%;
+            margin: 4rem auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            column-gap: 2rem;
+        }
+
+        @include smallest-v2 {
+            width: 90%;
+            margin: 4rem auto;
+        }
+    }
+
+    &__message {
+        display: flex;
+        align-items: center;
+        background-color: color(light-grey);
+        padding: 1rem 2rem;
+        border-radius: $border-radius;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: .4rem;
+            height: 100%;
+            right: 0;
+            background-color: color(secondary);
+            border-radius: $border-radius;
+        }
+
+        &--active {
+
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: .6rem;
+                height: .6rem;
+                border-radius: 50%;
+                background-color: color(secondary);
+                left: 1.3rem;
+
+                @include medium1 {
+                    left: 3.3rem;
+                }
+
+                @include small {
+                    left: 1.3rem;
+                }
+
+                @include smallest-v3 {
+                    left: 3.3rem;
+                }
+            }
+        }
+
+        @include medium1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            row-gap: .4rem;
+            align-items: center;
+            padding: 2.5rem 7rem;
+        }
+
+        @include small {
+            display: flex;
+            padding: 1rem 2rem;
+        }
+
+        @include smallest-v3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            row-gap: .4rem;
+            align-items: center;
+            padding: 2.5rem 7rem;
+        }
+
+
+    }
+
+    &__message-text {
+        font-weight: bold;
+        font-size: 1.3rem;
+        margin-left: 1.2rem;
+
+        @include medium1 {
+            margin: 0;
+        }
+
+        @include small {
+            margin-left: 1.2rem;
+        }
+
+        @include smallest-v3 {
+            margin: 0;
+        }
+    }
+
+    &__message-times {
+        font-weight: bold;
+        font-size: 1.7rem;
+        opacity: .3;
+        margin-left: auto;
+
+        i {
+            margin-right: .6rem;
+        }
+
+        @include medium1 {
+            margin: 0;
+        }
+
+        @include small {
+            margin-left: auto;
+        }
+
+        @include smallest-v3 {
+            margin: 0;
+        }
+    }
+
+    &__message-times ~ div {
+        opacity: .8;
+    }
+
+    &__message-date {
+        margin-right: .3rem;
+    }
+
+    &__message-expand {
+        margin-left: 2rem;
+        font-size: 2rem;
+
+        @include medium1 {
+            margin: 0;
+        }
+
+        @include small {
+            margin-left: 2rem;
+        }
+
+        @include smallest-v3 {
+            margin: 0;
+        }
+    }
+
+
+
+
+}
+
+
+

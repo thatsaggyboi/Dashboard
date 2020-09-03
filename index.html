@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <!--- basic page needs
+    ================================================== -->
+    <meta charset="UTF-8">
+    <title>Dashboard - PeopleSuite</title>
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- fontawesome
+    ================================================== -->
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous">
+    </script>
+    
+</head>
+<body>
+
+    <!-- SIDEBAR NAVIGATION
+    ================================================== -->
+    <div id="mySidenav" class="sidenav">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Team</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- FLEX CONTAINER THAT HOLD DASHBOARD SECTION AND PROFILE SECTION
+    ================================================== -->
+    <div class="container">
+
+        <!-- DASHBOARD SECTION
+        ================================================== -->
+        <div class="dashboard-section">
+            <header class="header">
+                <div class="header__ham">
+                    <span onclick="openNav()">
+                        <i class="fa fa-bars" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <form action="#" class="search">
+                    <input type="text" class="search__input" placeholder="Search...">
+                    <button class="search__button">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <div class="header__icon-box">
+                    <i class="fa fa-bell-o " aria-hidden="true"></i>
+                    <span class="header__notification">2</span>
+                </div>
+            </header>
+            <section class="main">
+                <div class="card">
+                    <h2 class="heading2">Welcome to the</h2>
+                    <h4 class="card__heading2 mb_lr">We are so happy to meet you.</h4>
+                    <p class="card__subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur sapiente ut corrupti, velit omnis enim vel laboriosam iusto error dolorum porro possimus molestias dolor?</p>
+                </div>
+                <div class="dashboard">
+                    <h2 class="heading2 heading2--green mb_md">Dashboard</h2>
+                    <ul class="dashboard__items">
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">Do</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">O' CI</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">Per</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">Di</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">On</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">Co</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">Sec</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </li>
+                        <li class="dashboard__item">
+                            <i class="fa fa-files-o" aria-hidden="true"></i>
+                            <p class="dashboard__item-name">Pro</p>
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>  
+                        </li>
+                    </ul>
+                </div>
+            </section> 
+        </div>
+
+        <!-- PROFILE SECTION
+        ================================================== -->
+        <div class="details">
+            <div class="profile">
+                <div class="profile__header">
+                    <h2 class="heading2 heading2--darkGreen">My Profile</h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                    <i class="fa fa-cog" aria-hidden="true"></i>
+                </div>
+                <div class="profile__picture">
+                    <div class="profile__icon">
+                        <img src="./img/avatar.webp" alt="profile-photo" class="picture">
+                    </div>
+                    <h3 class="profile__name">Joh <span class="profile__name--block">Rec</span></h3>
+                </div>
+            </div>
+            <div class="inbox">
+                <div class="inbox__header">
+                    <h2 class="heading2">Inbox</h2>
+                    <span class="inbox__header-badge">1 new</span>
+                </div>
+                <ul class="inbox__messages">
+                    <li class="inbox__message inbox__message--active">
+                        <p class="inbox__message-text">Review XYZ work with ABC</p>
+                        <p class="inbox__message-times">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="inbox__message-date">7 dec, 2020</div>
+                            <div class="inbox__message-time">10:00 AM</div>
+                        </p>
+                        <div class="inbox__message-expand">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                    <li class="inbox__message">
+                        <p class="inbox__message-text">Review XYZ work with ABC</p>
+                        <p class="inbox__message-times">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="inbox__message-date">7 dec, 2020</div>
+                            <div class="inbox__message-time">10:00 AM</div>
+                        </p>
+                        <div class="inbox__message-expand">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                    <li class="inbox__message">
+                        <p class="inbox__message-text">Review XYZ work with ABC</p>
+                        <p class="inbox__message-times">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="inbox__message-date">7 dec, 2020</div>
+                            <div class="inbox__message-time">10:00 AM</div>
+                        </p>
+                        <div class="inbox__message-expand">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                    <li class="inbox__message">
+                        <p class="inbox__message-text">Review XYZ work with ABC</p>
+                        <p class="inbox__message-times">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="inbox__message-date">7 dec, 2020</div>
+                            <div class="inbox__message-time">10:00 AM</div>
+                        </p>
+                        <div class="inbox__message-expand">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                    <li class="inbox__message">
+                        <p class="inbox__message-text">Review XYZ work with ABC</p>
+                        <p class="inbox__message-times">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="inbox__message-date">7 dec, 2020</div>
+                            <div class="inbox__message-time">10:00 AM</div>
+                        </p>
+                        <div class="inbox__message-expand">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                    <li class="inbox__message">
+                        <p class="inbox__message-text">Review XYZ work with ABC</p>
+                        <p class="inbox__message-times">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="inbox__message-date">7 dec, 2020</div>
+                            <div class="inbox__message-time">10:00 AM</div>
+                        </p>
+                        <div class="inbox__message-expand">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                    <li class="inbox__message">
+                        <p class="inbox__message-text">Review XYZ work with ABC</p>
+                        <p class="inbox__message-times">
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <div class="inbox__message-date">7 dec, 2020</div>
+                            <div class="inbox__message-time">10:00 AM</div>
+                        </p>
+                        <div class="inbox__message-expand">
+                            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- BASIC SCRIPT FOR SIDEBAR
+    ================================================== -->
+    <script>
+        /* Set the width of the side navigation to 200px */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "200px";
+        }
+
+        /* Set the width of the side navigation to 0 */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        } 
+    </script>
+    
+</body>
+</html>

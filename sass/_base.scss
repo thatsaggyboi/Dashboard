@@ -1,0 +1,40 @@
+////////////////////////////////////////
+// GOOGLE "MONTSERRAT" FONT
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+
+////////////////////////////////////////
+// GLOBAL RESET
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // CZ 100% MEANS 1REM = 16REM SO FOR 62.5% 1REM = 10REM 
+}
+
+body {
+    font-family: "Montserrat",sans-serif;
+    height: 100vh;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
